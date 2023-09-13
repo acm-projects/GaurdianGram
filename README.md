@@ -99,7 +99,7 @@ General Use
 
 | Command | Description |
 | ------ | ------ |
-| cd "RememberMe" | Change directories over to our repository |
+| cd "GuardianGram" | Change directories over to our repository |
 | git branch | Lists branches for you |
 | git branch "branch name" | Makes new branch |
 | git checkout "branch name" | Switch to branch |
