@@ -81,6 +81,46 @@ Capacitor 🤖
       - We'll use Capacitor to translate our web Next.js project into a native IOS/Android codebase!
 - Capacitor Documentation: https://capacitorjs.com/
 
+## Useful Tutorials
+[What is Git?](https://www.youtube.com/watch?v=2ReR1YJrNOM)\
+[Git download](https://git-scm.com/)\
+[Figma 101 by Shannon Carter](https://docs.google.com/presentation/d/1y7DccFYuEkj7Gxrk_ltuxhV9CLaQYzbXExcMCweqtPY/edit?usp=sharing)\
+[Net Ninja Next.js Beginner Tutorial Series](https://youtu.be/A63UxsQsEbU)\
+[JavaScript Mastery: Building a Beginner React App](https://www.youtube.com/watch?v=b9eMGE7QtTk)\
+[NetNinja: TailwindCSS Series](https://youtu.be/bxmDnn7lrnk)\
+[JavaScript Mastery: Building a Next.js App using TailwindCSS and Translating Design from a Figma Design](https://youtu.be/ugCN_gynFYw)\
+[How Prisma and Next.js work in tandem](https://www.prisma.io/nextjs)\
+[Prisma CRUD for Beginners](https://youtu.be/J8ObGtfy5n0)\
+[Building a REST API with Express.js and Prisma](https://www.dawsoncodes.com/posts/5/building-a-rest-api-with-prisma-and-expressjs)\
+[REST APIs with Prisma Docs](https://www.prisma.io/docs/concepts/overview/prisma-in-your-stack/rest)\
+
+## GitHub Cheat Sheet ᛘ
+General Use
+
+| Command | Description |
+| ------ | ------ |
+| cd "RememberMe" | Change directories over to our repository |
+| git branch | Lists branches for you |
+| git branch "branch name" | Makes new branch |
+| git checkout "branch name" | Switch to branch |
+| git checkout -b "branch name" | Same as 2 previous commands together |
+| git add . | Finds all changed files |
+| git commit -m "Testing123" | Commit with message |
+| git push origin "branch" | Push to branch |
+| git pull origin "branch" | Pull updates from a specific branch |
 
 
-
+## Estimated Timeline
+|   Week   |          Task(s)          |          Deliverables         |
+| -------- | ------------------------- | ----------------------------- |
+| 1        | Onboarding tasks          | Meet the team, set meeting dates and times, schedule a design day, finalize tech stack, start environment set-up. Solidify member roles, intro to Git, intro to Next.js/React.js/Javascript |
+| 2        | Wireframes and research| Finish up wireframes, practice apps with chosen tech stacks, practice git and github, final env. set-up, finalize app design, create user authentication schemas |
+| 3        | Coding app screens and backend logic | Frontend: 30% of app pages, Backend: authentication, build a dummy database to practice updating real time info, intro to TailwindCSS, define functioning schema + create CRUD API endpoints|
+| 4        | Coding app screens and backend logic | Frontend: 70% of app pages, Backend: start incorporating database with frontend code |
+| 5        | Coding app screens and backend logic | Frontend: 100% of app screens, Backend: continue incorporating database with frontend code |
+| 6        | Frontend touch ups and backend integration | Frontend and backend should be working together to inegrate funcitonalities to create a functioning MVP |
+| 7        | Frontend and backend touchups | Polished MVP |
+| 8        | Stretch goals | If time permits |
+| 9        | Presentation and practice |decide order of presenters, style of slide deck, write down a script |
+| 10       | Finalize presentation and practice | N/A |
+| Presentation week! | We made it! I'm proud of you :) |  💖 |
