@@ -22,7 +22,7 @@ Going on a date or out on the town for a big night? This app will allow you to d
 - Toggle The Big Button a certain way to categorize the user's current safety level (ex. tap The Big Button once if danger level is low, twice if it is moderate, press and hold if it is high and the user seeks immediate help)
 - Using a Shake Service: whenever the phone is physically shaked a certain way, GuardianGram will open up and immediately send out a distress alarm
 - Further socialization features: quick reacts to GaurdianGram posts
-- Activity Timeline feature: the user can upload their upcoming activities ahead of time and broadcast it on their safety network's feed
+- Activity Timeline feature: the user can upload their upcoming activities ahead of time and broadcast it on their safety network's feed. (Farhan was here)
 
 ## Tech Stack 👩🏾‍💻
 Figma 🎨
