@@ -229,21 +229,3 @@ http://ionicframework.com/docs/theming/ */
     --ion-card-background: #1e1e1e;
   }
 }
-
-.button {
-    /* Set the desired button styles */
-    display: inline-block;
-    padding: 10px 20px; /* Adjust padding as needed */
-    background-color: transparent; /* Transparent background */
-    color: white; /* Text color */
-    text-align: center; /* Center the text horizontally */
-    text-decoration: none; /* Remove underline from links (optional) */
-    cursor: pointer; /* Show a pointer cursor on hover (optional) */
-  }
-  
-  /* Define hover styles for the button */
-  .button:hover {
-    background-color: #000; /* Background color on hover */
-    color: #fff; /* Text color on hover */
-  }
-  

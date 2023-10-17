@@ -20,7 +20,7 @@ import Store from '../../store';
 
 const FeedCard = ({ title, type, text, author, authorAvatar, image }) => (
   <Card className="my-4 mx-auto">
-    <div className="h-32 w-full relative rounded">
+    <div className="h-32 w-full relative">
       <img className="rounded-t-xl object-cover min-w-full min-h-full max-w-full max-h-full" src={image} alt="" />
     </div>
     <div className="px-4 py-4 bg-white rounded-b-xl dark:bg-gray-900">
@@ -42,7 +42,7 @@ const Home = () => {
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
-    <IonPage>
+    <div class = "box">
       <IonHeader>
         <IonToolbar>
           <IonTitle>User Feed</IonTitle>
@@ -67,7 +67,7 @@ const Home = () => {
           <FeedCard {...i} key={index} />
         ))}
       </IonContent>
-    </IonPage>
+    </div>
   );
 };
 
