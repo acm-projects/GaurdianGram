@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonPage, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent } from '@ionic/react';
 
-function Settings() {
+function Set() {
 
   return (
     <IonPage>
@@ -14,4 +14,4 @@ function Settings() {
   );
 }
 
-export default Settings;
+export default Set;

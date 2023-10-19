@@ -7,8 +7,8 @@ import Home from './Feed';
 import Lists from './Lists';
 import ListDetail from './ListDetail';
 import Settings from './Settings';
-import SignUp from './SignUp';
-import Login from './Login';
+import SignUp from '../pages/SignUp';
+import Login from '../pages/Login';
 
 const TabsCopy = () => {
   return (

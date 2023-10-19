@@ -12,7 +12,7 @@ import {
   IonContent,
   IonMenuButton,
 } from '@ionic/react';
-import Notifications from './Notifications';
+import Notifications from '../pages/Notifications';
 import { useState } from 'react';
 import { notificationsOutline } from 'ionicons/icons';
 import { getHomeItems } from '../../store/selectors';
@@ -37,7 +37,7 @@ const FeedCard = ({ title, type, text, author, authorAvatar, image }) => (
   </Card>
 );
 
-const Home = () => {
+const Feed = () => {
   const homeItems = Store.useState(getHomeItems);
   const [showNotifications, setShowNotifications] = useState(false);
 
@@ -45,7 +45,7 @@ const Home = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>User Feed</IonTitle>
+          <IonTitle className='font-bold'>User Feed</IonTitle>
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
@@ -71,4 +71,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Feed;

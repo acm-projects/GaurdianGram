@@ -45,7 +45,7 @@ const signIn = () => {
                         
                     </IonCardContent>
                     <br />
-                    <ion-button disabled = "false" expand = "block">
+                    <ion-button style = {{width: '175px'}} disabled = "false" expand = "block">
                         <IonLabel>
                             <div>Sign Up</div>
                         </IonLabel>
