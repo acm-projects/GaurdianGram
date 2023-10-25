@@ -7,7 +7,6 @@ function Map() {
 
     const location = GeoLocation();
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: "AIzaSyClcFS24hcWrXCA0PciBNd97GpvZyednvY",
     });
 
     return (
