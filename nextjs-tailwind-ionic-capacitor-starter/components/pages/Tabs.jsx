@@ -31,7 +31,7 @@ const Tabs = () => {
         <IonRouterOutlet>
             <Route path="/tabs/home" render={() => <Home />} exact={true} />
             <Route path="/tabs/map" render={() => <Map/>} exact={true} />
-            <Route path="/tabs/Set" render={() => <Settings />} exact={true} />
+            <Route path="/tabs/Settings" render={() => <Settings />} exact={true} />
             <Route path="/tabs/Calendar" render={() => <Calendar />} exact={true} />
             <Route path="/tabs/Friends" render={() => <Friends />} exact={true} />
             <Route path="/tabs" render={() => <Redirect to="/tabs/home" />} exact={true} />
