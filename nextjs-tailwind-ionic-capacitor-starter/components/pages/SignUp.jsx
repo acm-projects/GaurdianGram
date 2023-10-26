@@ -18,7 +18,7 @@ import {
   } from '@ionic/react';
 
 
-const signIn = () => {
+const SignUp = () => {
     return(
         <div class = "box">
             <IonCard className='rounded-md m-5 h-[450px]'>
@@ -45,7 +45,7 @@ const signIn = () => {
                         
                     </IonCardContent>
                     <br />
-                    <ion-button style = {{width: '175px'}} disabled = "false" expand = "block">
+                    <ion-button class = "custom" style = {{width: '175px'}} disabled = "false" expand = "block">
                         <IonLabel>
                             <div>Sign Up</div>
                         </IonLabel>
@@ -56,4 +56,4 @@ const signIn = () => {
     );
 };
 
-export default signIn;
+export default SignUp;

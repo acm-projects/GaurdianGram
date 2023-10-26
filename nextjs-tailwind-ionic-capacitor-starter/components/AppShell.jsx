@@ -6,13 +6,14 @@ import { Redirect, Route } from 'react-router-dom';
 
 
 import Tabs from './pages/Tabs';
-import Home from './pages/Home';
-import Friends from './pages/Friends';
+import Home from './pages/Button';
+import Feed from './pages/Feed';
 import Map from './pages/Map';
 import Set from './pages/Set';
 import Calendar from './pages/Calendar';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import IndivPost from './pages/IndivPost';
 
 
 setupIonicReact({});
@@ -33,7 +34,8 @@ const AppShell = () => {
           <Route path="/tabs" render={() => <Tabs />} />
           <Route path="/" render={() => <Redirect to="/tabs/home" />} exact={true} />
           <Route path="/login" render={() => <Login />} />
-          <Route path="/signup" render={() => <Signup />} />
+          <Route path="/signup" render={() => <SignUp />} />
+          <Route path="/tabs/feed/post" render={() => <IndivPost />} />
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>

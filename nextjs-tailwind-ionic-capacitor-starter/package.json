@@ -18,6 +18,7 @@
     "@capacitor/status-bar": "^4.0.0",
     "@ionic/react": "^7.0.1",
     "@ionic/react-router": "^7.0.1",
+    "@react-google-maps/api": "^2.19.2",
     "@types/jest": "^26.0.20",
     "@types/node": "^12.19.15",
     "@types/react": "^18.0.17",
@@ -25,6 +26,7 @@
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "classnames": "^2.2.6",
+    "dotenv": "^16.3.1",
     "next": "^13.2.4",
     "node-geolocation": "^1.15.14",
     "react": "^18.2.0",
@@ -33,7 +35,8 @@
     "react-icons": "^4.11.0",
     "react-router": "^5.3.4",
     "react-router-dom": "^5.3.4",
-    "react-virtuoso": "^1.1.1"
+    "react-virtuoso": "^1.1.1",
+    "react-webcam": "^7.1.1"
   },
   "devDependencies": {
     "@capacitor/cli": "^4.0.0",
