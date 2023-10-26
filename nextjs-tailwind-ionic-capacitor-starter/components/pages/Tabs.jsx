@@ -7,11 +7,11 @@ import { IonReactRouter } from '@ionic/react-router';
 import { home, navigate, calendar, people, settings, chatbubbleEllipsesOutline} from 'ionicons/icons';
 
 // importing in function calls from tab pages 
-import Home from './Home';
+import Home from './Button';
 import Map from './Map';
 import Settings from './Settings';
 import Calendar from './Calendar';
-import Friends from "./Friends"
+import Feed from "./Feed"
 
 const Tabs = () => {
   return (
@@ -33,7 +33,7 @@ const Tabs = () => {
             <Route path="/tabs/map" render={() => <Map/>} exact={true} />
             <Route path="/tabs/settings" render={() => <Settings />} exact={true} />
             <Route path="/tabs/calendar" render={() => <Calendar />} exact={true} />
-            <Route path="/tabs/friends" render={() => <Friends />} exact={true} />
+            <Route path="/tabs/feed" render={() => <Feed />} exact={true} />
             <Route path="/tabs" render={() => <Redirect to="/tabs/home" />} exact={true} />
         </IonRouterOutlet>
 
@@ -48,7 +48,7 @@ const Tabs = () => {
                 <IonIcon style={{ color: 'white' }} icon={navigate} />
             </IonTabButton>
 
-            <IonTabButton tab="tab3" href="/tabs/friends" className = 'bg-black' style = {{border: '1px solid rgba(0, 0, 0, 50)'}}>
+            <IonTabButton tab="tab3" href="/tabs/feed" className = 'bg-black' style = {{border: '1px solid rgba(0, 0, 0, 50)'}}>
                 <IonIcon style={{ color: 'white' }} icon={people} />
             </IonTabButton>
 
