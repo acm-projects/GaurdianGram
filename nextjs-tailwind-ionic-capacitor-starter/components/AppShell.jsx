@@ -5,12 +5,15 @@ import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 
 
-import Feed from './pages/Home';
-import Lists from './pages/Feed';
-import ListDetail from './pages/ListDetail';
-import Settings from './pages/Settings';
 import Tabs from './pages/Tabs';
-// import Map from './pages/Map';
+import Home from './pages/Home';
+import Friends from './pages/Friends';
+import Map from './pages/Map';
+import Set from './pages/Set';
+import Calendar from './pages/Calendar';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+
 
 setupIonicReact({});
 
@@ -29,6 +32,8 @@ const AppShell = () => {
         <IonRouterOutlet id="main">
           <Route path="/tabs" render={() => <Tabs />} />
           <Route path="/" render={() => <Redirect to="/tabs/home" />} exact={true} />
+          <Route path="/login" render={() => <Login />} />
+          <Route path="/signup" render={() => <Signup />} />
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
