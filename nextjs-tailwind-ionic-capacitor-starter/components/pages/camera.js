@@ -50,6 +50,7 @@ function Camera() {
   return (
 
     <div>
+        <video ref={videoRef}></video>
         <div className='text-white'>your mom</div>
     </div>
   );
