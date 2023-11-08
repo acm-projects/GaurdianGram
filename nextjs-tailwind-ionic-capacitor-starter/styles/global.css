@@ -295,6 +295,10 @@ ion-input.custom {
 
 }
 
+ion-alert.alfresco-mode-on {
+  --backdrop-opacity: 0.5;
+}
+
 ion-input.custom .helper-text,
 ion-input.custom .counter {
   color: #373737;
