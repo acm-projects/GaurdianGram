@@ -26,6 +26,7 @@
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "classnames": "^2.2.6",
+    "framer-motion": "^10.16.4",
     "dotenv": "^16.3.1",
     "next": "^13.2.4",
     "node-geolocation": "^1.15.14",

@@ -13,6 +13,8 @@ import Set from './pages/Set';
 import Calendar from './pages/Calendar';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import Profile from "./pages/Profile";
+import IndivPost from './pages/IndivPost';
 
 
 setupIonicReact({});
@@ -33,7 +35,8 @@ const AppShell = () => {
           <Route path="/tabs" render={() => <Tabs />} />
           <Route path="/" render={() => <Redirect to="/tabs/home" />} exact={true} />
           <Route path="/login" render={() => <Login />} />
-          <Route path="/signup" render={() => <Signup />} />
+          <Route path="/signup" render={() => <SignUp />} />
+          <Route path="/indivPost" render={() => <IndivPost />} />
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>

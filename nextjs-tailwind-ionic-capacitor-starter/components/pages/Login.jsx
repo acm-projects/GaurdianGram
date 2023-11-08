@@ -55,7 +55,7 @@ const Login = () => {
             </IonCard>
             <ion-row class="ion-justify-content-center">
                 <div className='text-xs mt-10 mb-4 px-12 text-white'>
-                    Don't have an account? Sign up here:</div>
+                    Don&apos;t have an account? Sign up here:</div>
                 <ion-button class = "custom" href = "/signup">
                     <div className='text-xs'>Sign Up</div>
                 </ion-button>
