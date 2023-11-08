@@ -13,7 +13,16 @@ function IndivPost() {
   return (
     <IonPage>
       <IonContent>
-        <IonHeader>
+      {/* <IonHeader>
+        <IonToolbar>
+          <IonButtons slot="start">
+            <IonBackButton text="Previous" icon={caretBack}></IonBackButton>
+          </IonButtons>
+          <IonTitle>Back Button</IonTitle>
+        </IonToolbar>
+      </IonHeader> */}
+
+      <IonHeader>
           <IonToolbar className = 'font-weight-500'>
             <IonTitle>GuardianGram</IonTitle>
             <IonButtons slot="start">
@@ -21,8 +30,10 @@ function IndivPost() {
                 <IonIcon text="Previous" style={{ color: 'white' }} icon={caretBack} />
               </IonButton>
             </IonButtons>
+              
           </IonToolbar>
-        </IonHeader>
+      </IonHeader>
+
 
       <Card className="bg-clear px-4 py-4 my-4 w-5/8"> 
         <div className="h-4/5 w-full relative">
@@ -41,6 +52,9 @@ function IndivPost() {
           <p className="sm:text-sm text-lg text-gray-100 mr-1 my-3"> Check out this bird!</p>
         </div>
       </Card>
+
+
+
       </IonContent>
     </IonPage>
   );

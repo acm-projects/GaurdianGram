@@ -11,7 +11,7 @@ import Home from './Home';
 import Map from './Map';
 import Settings from './Settings';
 import Calendar from './Calendar';
-import Friends from "./Friends"
+import Friends from "./Friends";
 import Profile from "./Profile";
 
 const Tabs = () => {
@@ -61,6 +61,10 @@ const Tabs = () => {
             <IonTabButton tab="tab5" href="/tabs/profile" className = 'bg-black' style = {{border: '1px solid rgba(0, 0, 0, 50)'}}>
                 <IonIcon style={{ color: 'white' }} icon={person} />
             </IonTabButton>
+
+            {/* <IonTabButton tab="tab6" href="/tabs/settings" className = 'bg-black' style = {{border: '1px solid rgba(0, 0, 0, 50)'}}>
+                <IonIcon style={{ color: 'white' }} icon={settings} />
+            </IonTabButton> */}
 
         </IonTabBar>
 
