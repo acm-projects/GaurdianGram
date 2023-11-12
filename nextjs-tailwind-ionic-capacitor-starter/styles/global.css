@@ -219,6 +219,9 @@ body {
     height: 10px;
 }
 
+.top{
+  height: 10px;
+}
 
 ion-button  {
   --ripple-color: rgb(5, 9, 77);
@@ -226,8 +229,13 @@ ion-button  {
 
   --padding-top: 10px;
   --padding-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.gradient{
+  background:linear-gradient(rgb(7, 62, 126),transparent);
+  background-color:rgb(0, 5, 43); /*this your primary color*/
 }
 
 ion-button.custom{
@@ -245,13 +253,37 @@ ion-button.custom{
   --box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.733);
 
   --ripple-color: rgb(5, 9, 77);
-  --ripple-color: rgb(5, 9, 77);
-  --ripple-color: rgb(5, 9, 77);
 
   --padding-top: 10px;
   --padding-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ion-button.empty{
+  --padding-top: 0px;
+  --background: rgba(0,0,0,0);
+}
+
+ion-button.text{
+  --background: rgba(0,0,0,0);
+  --background-hover: #9ce0be;
+  --background-activated: #88f4be;
+  --background-focused: #88f4be;
+
+  --ripple-color: rgb(5, 9, 77);
+
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  --box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0);
+  
+  text-transform: none;
 }
 
 ion-button.feed{
@@ -278,7 +310,20 @@ ion-button.feed{
   margin-right: auto;
 }
 
-.placersssss {
+.friend{
+  --background: #131161;
+  --background-hover: #9ce0be;
+  --background-activated: #88f4be;
+  --background-focused: #88f4be;
+  
+  --color: rgb(255, 255, 255);
+}
+
+.bg{
+  background: rgba(255, 0, 0, 0.4);
+}
+
+.p {
   --background: #131161;
   --background-hover: #9ce0be;
   --background-activated: #88f4be;
@@ -298,14 +343,21 @@ ion-button.feed{
 
 .box{
   padding-top: 10px;
-  height:800px;
+  height:700px;
   width:max-width;
   background:linear-gradient(rgb(7, 62, 126),transparent);
   background-color:rgb(0, 5, 43) /*this your primary color*/
 }
 
+.background{
+  padding-top: 10px;
+  width:max-width;
+  height: max-height;
+  
+}
+
 ion-input.custom {
-  --background: #504FA1;
+  --background: #232180;
   --color: #000000;
   --placeholder-color: #e9e3e3;
   --placeholder-opacity: 0.8;
@@ -314,14 +366,19 @@ ion-input.custom {
   --padding-end: 0px;
   --padding-start: 0px;
   --padding-top: 10px;
+  margin-left: auto;
 
-  width:max-width;
+  --border-color: #000;
+  --border-style: solid;
+  --border-width: 1px;
 
 }
 
-ion-input.custom .helper-text,
-ion-input.custom .counter {
-  color: #373737;
+ion-input.settings{
+  --background: (rgb(237, 241, 246),transparent);
+  --color: #000000;
+  --placeholder-color: #e9e3e3;
+  --placeholder-opacity: 0.8;
 }
 
 ion-content{
@@ -340,6 +397,14 @@ ion-toolbar{
   --border-color: #000;
   --border-style: solid;
   --border-width: 1px;
+  
+  --box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.733);
+
+  --ripple-color: rgb(5, 9, 77);
+}
+
+ion-toolbar.custom{
+  --background: #000000;
   
   --box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.733);
 

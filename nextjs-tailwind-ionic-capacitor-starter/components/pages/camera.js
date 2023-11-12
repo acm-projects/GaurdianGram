@@ -1,6 +1,7 @@
-
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent } from '@ionic/react';
+import {camera} from 'ionicons/icons';
+import { IonPage, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent, IonIcon } from '@ionic/react';
 import { useRef, useEffect, useState } from 'react';
+
 
 
 function Camera() {
@@ -49,10 +50,13 @@ function Camera() {
 
   return (
 
-    <div>
-        <video ref={videoRef}></video>
+    <IonContent>
+        <video className='h-full w-fit object-cover' ref={videoRef}></video>
         <div className='text-white'>your mom</div>
-    </div>
+        <div>
+            <IonIcon classname = '' icon = {camera}/>
+        </div>
+    </IonContent>
   );
 
 }
