@@ -4,7 +4,7 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonRouterOutlet, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { home, navigate, calendar, people, settings, chatbubbleEllipsesOutline, camera} from 'ionicons/icons';
+import { home, navigate, calendar, people, person, settings, chatbubbleEllipsesOutline, camera} from 'ionicons/icons';
 
 // importing in function calls from tab pages 
 import Home from './Button';
@@ -13,7 +13,8 @@ import Settings from './Settings';
 import Calendar from './Calendar';
 import Feed from "./Feed";
 import Camera from "./camera";
-import Comments from "./Comments";
+import Comments from "./Comments";;
+import Profile from "./Profile";
 
 const Tabs = () => {
   return (
@@ -37,6 +38,7 @@ const Tabs = () => {
             <Route path="/tabs/camera" render={() => <Camera />} exact={true} />
             <Route path="/tabs/feed" render={() => <Feed />} exact={true} />
             <Route path="/tabs/comments" render={() => <Comments />} exact={true} />
+            <Route path="/tabs/profile" render={() => <Profile />} exact={true} />
             <Route path="/tabs" render={() => <Redirect to="/tabs/home" />} exact={true} />
         </IonRouterOutlet>
 
@@ -59,9 +61,13 @@ const Tabs = () => {
                 <IonIcon style={{ color: 'white' }} icon={camera} />
             </IonTabButton>
 
-            <IonTabButton tab="tab5" href="/tabs/settings" className = 'bg-black' style = {{border: '1px solid rgba(0, 0, 0, 50)'}}>
-                <IonIcon style={{ color: 'white' }} icon={settings} />
+            <IonTabButton tab="tab5" href="/tabs/profile" className = 'bg-black' style = {{border: '1px solid rgba(0, 0, 0, 50)'}}>
+                <IonIcon style={{ color: 'white' }} icon={person} />
             </IonTabButton>
+
+            {/* <IonTabButton tab="tab6" href="/tabs/settings" className = 'bg-black' style = {{border: '1px solid rgba(0, 0, 0, 50)'}}>
+                <IonIcon style={{ color: 'white' }} icon={settings} />
+            </IonTabButton> */}
 
         </IonTabBar>
 
