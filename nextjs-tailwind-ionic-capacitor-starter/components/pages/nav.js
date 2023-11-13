@@ -57,7 +57,6 @@ const GeoLocation = () => {
    return location;
 }
 
-
 export default GeoLocation;
 
 

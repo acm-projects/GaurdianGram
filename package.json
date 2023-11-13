@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "@prisma/client": "^5.5.2",
+    "bcrypt": "^5.1.1",
     "node-geolocation": "^1.15.14"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.1",
+    "prisma": "^5.5.2"
   }
 }

@@ -34,7 +34,7 @@ const Notifications = ({ open, onDidDismiss }) => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Notifications</IonTitle>
-          <IonButton slot="end" fill="clear" color="dark" onClick={onDidDismiss}>
+          <IonButton slot="end" fill="clear" color="light" onClick={onDidDismiss}>
             <IonIcon icon={close} />
           </IonButton>
         </IonToolbar>

@@ -1,86 +1,60 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { IonButton } from '@ionic/react';
+import {
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonButtons,
+  IonButton,
+  IonIcon,
+  IonContent,
+  IonMenuButton,
+  IonCard
+} from '@ionic/react';
+import Notifications from './Notifications';
+import { useState } from 'react';
+import { notificationsCircle, notificationsOutline, chatbubbleEllipsesOutline, close, trash} from 'ionicons/icons';
+import { getHomeItems } from '../../store/selectors';
+import Store from '../../store';
+import IndivPost from './IndivPost';
+import Image from 'next/Image';
+import { manjari } from '../../pages/_app';
+import { majormono } from '../../pages/_app';
 
-function Friends() {
-  const videoRef = useRef(null);
-  const photoRef = useRef(null);
-  const [hasPhoto, setHasPhoto] = useState(false);
+export const FriendCard = ({ title, type, text, author, authorAvatar, image, time}) => (
+    <IonCard className=' bg-black mx-3 mt-3'>
+        <div className={manjari.className}>
+            <div className="flex space-x-3 mb-2 mx-2 h-fit">
+              
+              <div style={{width: '235px'}} className="flex items-center">
+                <div className="mr-2 w-7 h-7 relative">
+                    <img src={authorAvatar} className="rounded-full object-cover min-w-full min-h-full max-w-full max-h-full mt-1" alt="" />
+                </div>
+                <h3 className="text-white dark:text-gray-200 text-sm font-bold pt-1">{author}</h3>
+              </div>
+              
+              <div className="w-5 h-5 relative my-auto">
+                  <IonIcon icon={trash} color="light" className='object-cover min-w-full min-h-full max-w-full max-h-full'/>
+              </div>
 
-  const videoConstraints = {
-    width: 414,
-    height: 200, // Adjust the height as needed
-  };
+            </div>
+        </div>
+    </IonCard>
+);
 
-  const getStream = () => {
-    if (navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices
-        .getUserMedia({ video: videoConstraints, audio: false })
-        .then(function (stream) {
-          let video = videoRef.current;
-          video.srcObject = stream;
-          video.play();
-        })
-        .catch(function (error) {
-          console.log('Something went wrong!');
-          ErrorHandler(error);
-        });
-    }
-  };
-
-  function ErrorHandler(error) {
-    return {
-      status: 0,
-      message: error,
-    };
-  }
-
-  const takePhoto = () => {
-    const width = 414;
-    const height = width / (16 / 9);
-
-    let video = videoRef.current;
-    let photo = photoRef.current;
-
-    photo.width = width;
-    photo.height = height;
-
-    let ctx = photo.getContext('2d');
-    ctx.drawImage(video, 0, 0, width, height);
-
-    setHasPhoto(true);
-  };
-
-  const closePhoto = () => {
-    let photo = photoRef.current;
-    let ctx = photo.getContext('2d');
-  
-    // Use the width and height set in the takePhoto function to clear the canvas
-    ctx.clearRect(0, 0, photo.width, photo.height);
-  
-    setHasPhoto(false);
-  };
-
-  useEffect(() => {
-    getStream();
-  }, [videoRef]);
-
-  
+const Friends = () => {
+  const homeItems = Store.useState(getHomeItems);
+  const [showNotifications, setShowNotifications] = useState(false);
 
   return (
-    <div>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-      <video ref={videoRef} style={{ width: '100%', height: 'auto' }}></video>
-      <IonButton onClick={takePhoto} expand="full" size="large"> Snap!</IonButton>
-      </div>
-        <div className={'result ' + (hasPhoto ?
-            'hasPhoto' : '')}>
-          <canvas ref={photoRef} style={{ width: '100%', height: 'auto' }}></canvas>
-          <IonButton onClick={closePhoto}>
-            Close
-            </IonButton>
-        </div>
-    </div>
+    <IonPage>
+      <IonContent>
+        <label>
+          Frieds feed!
+        </label>
+      </IonContent>
+    </IonPage>
   );
-}
+};
 
 export default Friends;
+
