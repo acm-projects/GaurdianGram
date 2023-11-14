@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/Image';
 import Card from '../ui/Card';
 
 import {
@@ -11,64 +11,92 @@ import {
   IonIcon,
   IonContent,
   IonMenuButton,
+  IonCard
 } from '@ionic/react';
 import Notifications from './Notifications';
 import { useState } from 'react';
-import { notificationsOutline } from 'ionicons/icons';
+import { notificationsCircle, notificationsOutline, chatbubbleEllipsesOutline, person } from 'ionicons/icons';
 import { getHomeItems } from '../../store/selectors';
 import Store from '../../store';
+import { majormono } from '../../pages/_app';
+import { manjari } from '../../pages/_app';
 
-const FeedCard = ({ title, type, text, author, authorAvatar, image }) => (
-  <Card className="my-4 mx-auto">
-    <div className="h-32 w-full relative rounded">
-      <img className="rounded-t-xl object-cover min-w-full min-h-full max-w-full max-h-full" src={image} alt="" />
-    </div>
-    <div className="px-4 py-4 bg-white rounded-b-xl dark:bg-gray-900">
-      <h4 className="font-bold py-0 text-s text-gray-400 dark:text-gray-500 uppercase">{type}</h4>
-      <h2 className="font-bold text-2xl text-gray-800 dark:text-gray-100">{title}</h2>
-      <p className="sm:text-sm text-s text-gray-500 mr-1 my-3 dark:text-gray-400">{text}</p>
-      <div className="flex items-center space-x-4">
-        <div className="w-10 h-10 relative">
+export const FeedCard = ({ title, type, text, author, authorAvatar, image, time}) => (
+  <IonCard className='border border-white bg-black mx-3 mt-3'> 
+    <div className='mb-10 mx-5'>
+      <div className="mt-3 flex items-center space-x-3 mb-2 mx-2">
+        <div className="w-7 h-7 relative">
           <img src={authorAvatar} className="rounded-full object-cover min-w-full min-h-full max-w-full max-h-full" alt="" />
         </div>
-        <h3 className="text-gray-500 dark:text-gray-200 m-l-8 text-sm font-medium">{author}</h3>
+        <div className={manjari.className}>
+          <h3 className="text-white dark:text-gray-200 m-l-8 text-sm font-bold">{author}</h3>
+        </div>
+      </div>
+      <div className="h-85 w-full relative rounded">
+        <img src={image} className="rounded-md object-cover min-w-full min-h-full max-w-full max-h-full" alt="" />
+      </div>
+      <div class='grid grid-cols-7'> 
+        <div style={{width: '205px'}} className="pt-1 dark:bg-gray-900">
+          <div className={manjari.className}>
+            <p className="sm:text-sm text-xs text-white mx-2 mt-4 dark:text-gray-400">{text}</p>
+            <p className="sm:text-sm text-xs text-gray-400 mx-2 dark:text-gray-400">X day(s) ago</p>
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+            <IonButton class="empty" className='bg-black -mx-4 mt-4' href = '/tabs/comments'>
+              <IonIcon slot = "icon-only" className = 'mt-3' style={{ color: 'white' , height: '33px', width: '33px'}} icon={chatbubbleEllipsesOutline}/>
+            </IonButton>
+        </div>
       </div>
     </div>
-  </Card>
+  </IonCard>
 );
 
-const Home = () => {
+const Feed = () => {
   const homeItems = Store.useState(getHomeItems);
   const [showNotifications, setShowNotifications] = useState(false);
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>User Feed</IonTitle>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonButtons slot="end">
-            <IonButton onClick={() => setShowNotifications(true)}>
-              <IonIcon icon={notificationsOutline} />
-            </IonButton>
-          </IonButtons>
-        </IonToolbar>
+
+      <IonHeader className='border-b border-white bg-black'>
+        <IonCard>
+          <IonToolbar class="custom" className = 'bg-black font-weight-500'>
+            
+            <IonTitle className={majormono.className}>Your Feed</IonTitle>
+            
+            <IonButtons slot="end">
+              <IonButton fill = 'clear' href = "/tabs/feed/friends">
+                <IonIcon icon={person}/>
+              </IonButton>
+            </IonButtons>
+          
+          </IonToolbar>
+        </IonCard>
       </IonHeader>
-      <IonContent className="ion-padding" fullscreen>
+
+      <IonContent className="ion-padding-0" fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Feed</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <Notifications open={showNotifications} onDidDismiss={() => setShowNotifications(false)} />
-        {homeItems.map((i, index) => (
-          <FeedCard {...i} key={index} />
-        ))}
+        <Notifications open={showNotifications} onDidDismiss={() => setShowNotifications(false)} /> 
+          <div>
+            {homeItems.map((i, index) => (
+              <FeedCard {...i} key={index} />
+            ))}
+          </div>
       </IonContent>
+
     </IonPage>
   );
 };
 
-export default Home;
+export default Feed;
+
