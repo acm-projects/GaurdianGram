@@ -1,5 +1,5 @@
-import prisma from "../../../../prisma";
-import { connectToDB } from "../../../../utils"
+import prisma from "../../../prisma";
+import { connectToDB } from "../../../utils"
 import { NextResponse } from "next/server";
 
 export const GET = async (
