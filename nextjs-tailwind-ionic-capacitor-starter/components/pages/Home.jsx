@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion"
-import {IonAlert, IonList, IonItem, IonPage, IonHeader, IonToggle, IonToolbar, IonButtons, IonButton, IonIcon, IonBackButton, IonMenuButton, IonTitle, IonContent } from '@ionic/react';
-
+import {IonAlert, IonList, IonItem, IonToast, IonPage, IonHeader, IonToggle, IonToolbar, IonButtons, IonButton, IonIcon, IonBackButton, IonMenuButton, IonTitle, IonContent } from '@ionic/react';
 import Notifications from './Notifications';
 import { useState } from 'react';
 import { notificationsOutline, settings } from 'ionicons/icons';
@@ -30,12 +29,10 @@ function Home() {
     }
   };
 
-
-
   return (
     <IonPage>
       <IonContent>
-        <IonHeader>
+        <IonHeader id='header'>
           <IonToolbar className = 'font-weight-500'>
             <IonTitle>GuardianGram</IonTitle>
             <IonButtons slot="start">
@@ -65,8 +62,7 @@ function Home() {
               onClick={handleAlfrescoMode}
             >
               Alfresco Mode 
-              {isAlfrescoModeOn ? " ON" : " OFF"}
-            
+              {isAlfrescoModeOn ? " ON" : " OFF"}            
               
             </IonToggle>
             <IonAlert
@@ -75,34 +71,51 @@ function Home() {
               message="Your friends received a notification that you turned on Alfresco Mode."
               buttons={[
                 {
-                  text: 'OK',
-                  cssClass: 'alfresco-mode-on',
+                  text: 'OK'
                 },
               ]}
             ></IonAlert>
           </div>
-
-
           
           <div className="flex h-4/5 items-center justify-center">
             <motion.button
               whileTap={{ scale: 0.8 }}
               className={`text-[50px] p-1 h-80 w-80 font-bold border-solid border-4 text-white font-16 rounded-full ${
-                isSOSClicked ? "bg-green-500" : "bg-gradient-to-b from-red-300 to-red-500"
+                isSOSClicked ? "bg-gradient-to-b from-[#6FE4C1] to-[#1B5E4A]" : "bg-gradient-to-b from-[#FFBC8F] to-[#FE7F2D]"
               }`}
               onClick={handleSOSClick}
             >
               {isSOSClicked ? "Help is on the way" : "SOS"}
             </motion.button>
-            <span className="relative flex h-3 w-3 ml-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
-            </span>
           </div>
+
+          <div className='h-1/6'>
+            <button id="notif" className='opacity-0 w-full h-full'>
+              here
+            </button>
+          </div>
+
+          <IonToast 
+              trigger="notif" 
+              message="Time for a Gram!" 
+              duration={5000} 
+              
+              position="top"
+              
+              buttons={[
+                {
+                  
+                  text: 'Go Gram!',
+                  role: 'info',
+                  
+                  // handler: () => {
+                  //   href= "/tabs/Friends"
+                  // },
+                },                
+              ]}              
+            >
+            </IonToast>
         </div>
-        
-
-
       </IonContent>
     </IonPage>
   );

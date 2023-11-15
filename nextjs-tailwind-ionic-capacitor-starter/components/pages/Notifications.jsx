@@ -13,7 +13,6 @@ import {
 } from '@ionic/react';
 import Store from '../../store';
 import { getNotifications } from '../../store/selectors';
-
 import { close } from 'ionicons/icons';
 
 const NotificationItem = ({ notification }) => (
@@ -33,7 +32,7 @@ const Notifications = ({ open, onDidDismiss }) => {
     <IonModal isOpen={open} onDidDismiss={onDidDismiss}>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Notifications</IonTitle>
+          <IonTitle>GuardianGram</IonTitle>
           <IonButton slot="end" fill="clear" color="light" onClick={onDidDismiss}>
             <IonIcon icon={close} />
           </IonButton>
