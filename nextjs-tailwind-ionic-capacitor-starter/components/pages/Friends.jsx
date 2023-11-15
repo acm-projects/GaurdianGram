@@ -1,119 +1,60 @@
-import { IonPage, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent } from '@ionic/react';
-import { useRef, useEffect, useState } from 'react';
+import {
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonButtons,
+  IonButton,
+  IonIcon,
+  IonContent,
+  IonMenuButton,
+  IonCard
+} from '@ionic/react';
+import Notifications from './Notifications';
+import { useState } from 'react';
+import { notificationsCircle, notificationsOutline, chatbubbleEllipsesOutline, close, trash} from 'ionicons/icons';
+import { getHomeItems } from '../../store/selectors';
+import Store from '../../store';
+import IndivPost from './IndivPost';
+import Image from 'next/Image';
+import { manjari } from '../../pages/_app';
+import { majormono } from '../../pages/_app';
 
+export const FriendCard = ({ title, type, text, author, authorAvatar, image, time}) => (
+    <IonCard className=' bg-black mx-3 mt-3'>
+        <div className={manjari.className}>
+            <div className="flex space-x-3 mb-2 mx-2 h-fit">
+              
+              <div style={{width: '235px'}} className="flex items-center">
+                <div className="mr-2 w-7 h-7 relative">
+                    <img src={authorAvatar} className="rounded-full object-cover min-w-full min-h-full max-w-full max-h-full mt-1" alt="" />
+                </div>
+                <h3 className="text-white dark:text-gray-200 text-sm font-bold pt-1">{author}</h3>
+              </div>
+              
+              <div className="w-5 h-5 relative my-auto">
+                  <IonIcon icon={trash} color="light" className='object-cover min-w-full min-h-full max-w-full max-h-full'/>
+              </div>
 
-// make camera the whole screen
-// flip camera
+            </div>
+        </div>
+    </IonCard>
+);
 
+const Friends = () => {
+  const homeItems = Store.useState(getHomeItems);
+  const [showNotifications, setShowNotifications] = useState(false);
 
-function Friends() {
-    const videoRef = useRef(null);
-
-    const videoConstraints = {
-        width: self.width,
-        height: self.height
-    };
-
-    const getStream = () => {
-        if (navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices
-            .getUserMedia({ 
-            video: videoConstraints, audio: true, 
-            facingMode: {
-                exact: 'user'
-            }
-            })
-            .then((stream) => {
-                let video = videoRef.current;
-                video.srcObject = stream;
-                video.play();
-            })
-            .catch(function (error) {
-                ErrorHandler(error);
-            });
-        }
-    };
-
-
-    function ErrorHandler(error) {
-        return {
-            status: 0,
-            message: error
-        };
-    }
-
-    useEffect(() => {
-        getStream();
-    }, [videoRef]);
-
-
-    // function fullScreen(videoRef){
-    //     const vid = document.getElementById('videoRef')
-    //     if (vid && vid.requestFullscreen) {
-    //         vid.requestFullscreen();
-    //     }
-
-    // }
-
-    // if(videoRef){
-    //     fullScreen(videoRef);
-    // }
-
-    // const switchCamera = () => {
-
-
-    //     if (facingMode == 'user'){
-    //         mode = 'enviornment'
-    //     }
-    //     else{
-    //         mode = 'user'
-    //     }
-
-    //     navigator.mediaDevices
-    //         .getUserMedia({ 
-    //         video: videoConstraints, audio: true, 
-    //         facingMode: {
-    //             exact: mode
-    //         }
-    //         });
-    // }
-
-    // addEventListener.onClick('click', switchCamera());
-
-    const biar = () => {
-        console.log('BIAR FEKY')
-    }
-
-    return (
-        // <div>
-        //   {videoRef ? (
-        //     <video ref={videoRef} autoPlay={true}></video>
-        //   ) : (
-        //     <IonPage>
-        //       <IonContent class='bottom'>
-        //         Unable to load camera
-        //       </IonContent>
-        //     </IonPage>
-        //   )}
-        //   <div className="floor">
-        //     Your Text Here
-        //   </div>
-        // </div>je nekecnmhu ba ei si azin 
-
-        <IonPage>
-              <IonContent>
-                <video ref={videoRef}></video>
-              </IonContent>
-
-            <IonContent className = 'grid grid-cols-1'> 
-                <button onClick={() => biar()}>nice</button>
-            </IonContent>
-        </IonPage>
-
-        );
-
-      
-    
+  return (
+    <IonPage>
+      <IonContent>
+        <label>
+          Frieds feed!
+        </label>
+      </IonContent>
+    </IonPage>
+  );
 };
+
 export default Friends;
 
