@@ -12,7 +12,7 @@ import {
 } from '@ionic/react';
 import Notifications from './Notifications';
 import { useState } from 'react';
-import { notificationsCircle, notificationsOutline, chatbubbleEllipsesOutline, close, trash} from 'ionicons/icons';
+import { settings, notificationsCircle, notificationsOutline, chatbubbleEllipsesOutline, close, trash} from 'ionicons/icons';
 import { getHomeItems } from '../../store/selectors';
 import Store from '../../store';
 import IndivPost from './IndivPost';
@@ -21,7 +21,7 @@ import { manjari } from '../../pages/_app';
 import { majormono } from '../../pages/_app';
 
 export const FriendCard = ({ title, type, text, author, authorAvatar, image, time}) => (
-    <IonCard className=' bg-black mx-3 mt-3'>
+    <IonCard className='px-4  bg-black mx-3 mt-3 rounded-full'>
         <div className={manjari.className}>
             <div className="flex space-x-3 mb-2 mx-2 h-fit">
               
@@ -38,8 +38,9 @@ export const FriendCard = ({ title, type, text, author, authorAvatar, image, tim
 
             </div>
         </div>
-    </IonCard>
+    </IonCard>  
 );
+
 
 const Friends = () => {
   const homeItems = Store.useState(getHomeItems);
@@ -47,10 +48,33 @@ const Friends = () => {
 
   return (
     <IonPage>
-      <IonContent>
-        <label>
-          Frieds feed!
-        </label>
+      <IonHeader >
+        <IonToolbar className = 'font-weight-500'>
+          <IonTitle>Profile</IonTitle>
+          <IonButtons slot="start">
+            <IonMenuButton />
+          </IonButtons>
+          <IonButtons slot="end">
+            <IonButton fill = 'clear' onClick={() => setShowNotifications(true)}>
+              <IonIcon icon={notificationsOutline} />
+            </IonButton>
+            
+            <IonButton href="/tabs/settings" >
+              <IonIcon style={{ color: 'white' }} icon={settings} />
+            </IonButton>
+
+          </IonButtons>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent className="ion-padding-0" fullscreen>
+        <IonHeader collapse="condense">
+          <IonToolbar>
+            <IonTitle size="large">Feed</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+         {homeItems.map((i, index) => (
+          <FeedCard {...i} key={index} />
+        ))}
       </IonContent>
     </IonPage>
   );

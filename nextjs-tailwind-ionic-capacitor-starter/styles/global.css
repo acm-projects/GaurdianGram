@@ -318,6 +318,14 @@ ion-alert.alfresco-mode-on {
   --backdrop-opacity: 0.5;
 }
 
+ion-alert.alfresco-mode-on {
+  --backdrop-opacity: 0.5;
+}
+
+ion-alert.alfresco-mode-on {
+  --backdrop-opacity: 0.5;
+}
+
 .friend{
   --background: #131161;
   --background-hover: #9ce0be;
@@ -402,6 +410,8 @@ ion-content{
   --background:linear-gradient(rgb(7, 62, 126),transparent);
   background-color:rgb(0, 5, 43) /*this your primary color*/
 }
+
+
 
 
 

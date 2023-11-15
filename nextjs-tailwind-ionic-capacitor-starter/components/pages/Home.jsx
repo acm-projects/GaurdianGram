@@ -29,6 +29,28 @@ function Home() {
     }
   };
 
+
+  const [showNotifications, setShowNotifications] = useState(false);
+
+  const [showActiveSOS, setShowActiveSOS] = useState(false);
+
+  const [isSOSClicked, setIsSOSClicked] = useState(false);
+
+  const [isAlfrescoModeOn, setAlfrescoModeOn]= useState(false);
+
+  const handleSOSClick = () => {
+    // ti will change when the button is clicked
+    setIsSOSClicked(!isSOSClicked);
+  };
+
+  const handleAlfrescoMode = () => {
+    // ti will change when the button is clicked
+    setAlfrescoModeOn(!isAlfrescoModeOn);
+    if (isAlfrescoModeOn){
+      
+    }
+  };
+
   return (
     <IonPage>
       <IonContent>

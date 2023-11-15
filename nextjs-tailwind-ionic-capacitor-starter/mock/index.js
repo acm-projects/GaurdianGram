@@ -98,6 +98,26 @@ export const profileItems = [
   },
 ];
 
+export const profileItems = [
+  {
+    text: 'We just got back from a trip to Maui, and we had a great time...',
+    image: images[1],
+    time: "2 days ago"
+  },
+  {
+    text:
+      'Last month we took a trek to the Arctic Circle. The isolation was just what we needed after...',
+    image: images[0],
+    time: "2 days ago"
+  },
+  {
+    text:
+      'The Faroe Islands are a North Atlantic archipelago located 320 kilometres (200 mi) north-northwest of Scotland...',
+    image: images[2],
+    time: "2 days ago"
+  },
+];
+
 export const notifications = [
   { title: 'Time for a Gram!', when: '6 hr' },
   { title: 'Alfresco Mode is on, Go Gram!', when: '1 day' },

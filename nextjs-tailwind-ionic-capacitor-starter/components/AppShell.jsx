@@ -18,7 +18,9 @@ import Friends from './pages/Friends';
 import Settings from './pages/Settings';
 import Comments from './pages/Comments';
 import WelcomePage from './pages/WelcomePage';
-import GeoSettings from './pages/GeoLocSettings';
+import GeoSettings from './pages/GeoLocSettings';import Profile from "./pages/Profile";
+import IndivPost from './pages/IndivPost';
+
 
 setupIonicReact({});
 

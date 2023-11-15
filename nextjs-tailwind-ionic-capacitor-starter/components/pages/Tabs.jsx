@@ -4,7 +4,7 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonRouterOutlet, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { home, navigate, calendar, people, person, settings, chatbubbleEllipsesOutline, camera} from 'ionicons/icons';
+import { home, navigate, calendar, people, person, person, settings, chatbubbleEllipsesOutline, camera} from 'ionicons/icons';
 
 // importing in function calls from tab pages 
 import Home from './Button';
@@ -36,6 +36,7 @@ const Tabs = () => {
             <Route path="/tabs/map" render={() => <Map/>} exact={true} />
             <Route path="/tabs/settings" render={() => <Settings />} exact={true} />
             <Route path="/tabs/camera" render={() => <Camera />} exact={true} />
+            <Route path="/tabs/profile" render={() => <Profile />} exact={true} />
             <Route path="/tabs/feed" render={() => <Feed />} exact={true} />
             <Route path="/tabs/comments" render={() => <Comments />} exact={true} />
             <Route path="/tabs/profile" render={() => <Profile />} exact={true} />
